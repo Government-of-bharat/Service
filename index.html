@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta -->
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="MindBloom Tutors - Professional home tutoring services for Math, Science, English and more. Personalized 1-on-1 sessions with expert tutors.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MindBloom Tutors</title>
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;500&display=swap" rel="stylesheet">
-  
-  <!-- Bootstrap -->
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Icons -->
+  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  
   <!-- Custom CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ✅ Navbar -->
-<nav id="navbar" class="navbar navbar-expand-lg fixed-top py-3">
+<!-- Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light">
   <div class="container">
     <a class="navbar-brand fw-bold text-primary" href="#">MindBloom Tutors</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto me-3">
+      <ul class="navbar-nav ms-auto me-3 text-dark">
         <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
         <li class="nav-item"><a class="nav-link" href="#tutors">Tutors</a></li>
@@ -42,39 +36,47 @@
   </div>
 </nav>
 
-<!-- ✅ Hero -->
-<header id="hero" class="vh-100 d-flex align-items-center text-center text-white"
- style="background: url('https://placehold.co/1920x1080?text=Tutor+with+student+image') center/cover no-repeat;">
-  <div class="container">
-    <h1 class="display-4 fw-bold">Unlock Your Child's Full Potential</h1>
-    <p class="lead my-3">Personalized, one-on-one tutoring from certified experts in Math, Science, English, and more.</p>
-    <a href="#" class="btn btn-accent btn-lg me-3" data-bs-toggle="modal" data-bs-target="#consultationModal">Book a Free Consultation</a>
-    <a href="#tutors" class="d-block mt-3 text-white text-decoration-underline">See Our Tutors →</a>
+<!-- Hero Section -->
+<header id="hero" class="hero-bg d-flex align-items-center" style="min-height: 95vh;">
+  <div class="container position-relative z-2">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+        <h1 class="display-5 fw-bold text-primary mb-3">Unlock Your Child's <span class="text-accent">Potential</span></h1>
+        <p class="lead mb-4 text-dark">Expert home tutors for K-12. Personalized learning in Math, Science, English, and more.</p>
+        <a href="#" class="btn btn-accent btn-lg me-2" data-bs-toggle="modal" data-bs-target="#consultationModal">Book a Free Consultation</a>
+        <a href="#tutors" class="d-block mt-3 text-secondary text-decoration-underline">See Our Tutors →</a>
+      </div>
+      <div class="col-md-6 text-center">
+        <!-- SVG Illustration: happy kids and tutor -->
+        <img src="https://raw.githubusercontent.com/storyset/illustrations/master/svg/kids-learning/rafiki.svg" alt="Children with tutors illustration" class="img-fluid" style="max-height:350px;">
+        <!-- Replace SVG with real classroom photo if you like -->
+      </div>
+    </div>
   </div>
 </header>
 
-<!-- ✅ How It Works -->
-<section id="how-it-works" class="py-5">
+<!-- How It Works -->
+<section id="how-it-works" class="py-5 bg-white">
   <div class="container text-center">
-    <h2 class="mb-4">How It Works</h2>
+    <h2 class="mb-4 fw-bold text-primary">How It Works</h2>
     <div class="row gy-4">
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm p-4">
-          <i class="bi bi-person-check display-4 text-primary mb-3"></i>
+        <div class="card h-100 shadow-sm border-0 p-4">
+          <i class="bi bi-person-check display-5 text-accent mb-2"></i>
           <h5>Consult & Match</h5>
           <p>Free consultation to match your child with the perfect tutor.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm p-4">
-          <i class="bi bi-lightbulb display-4 text-secondary mb-3"></i>
+        <div class="card h-100 shadow-sm border-0 p-4">
+          <i class="bi bi-lightbulb display-5 text-primary mb-2"></i>
           <h5>Personalized Learning</h5>
           <p>Customized lesson plans and one-on-one attention for your child.</p>
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card h-100 shadow-sm p-4">
-          <i class="bi bi-bar-chart-line display-4 text-warning mb-3"></i>
+        <div class="card h-100 shadow-sm border-0 p-4">
+          <i class="bi bi-bar-chart-line display-5 text-secondary mb-2"></i>
           <h5>Track Progress</h5>
           <p>Regular assessments and detailed progress reports for parents.</p>
         </div>
@@ -83,53 +85,56 @@
   </div>
 </section>
 
-<!-- ✅ Tutors -->
+<!-- Tutors Section -->
 <section id="tutors" class="py-5 bg-light">
   <div class="container text-center">
-    <h2 class="mb-5">Our Expert Tutors</h2>
-    <div class="row g-4">
+    <h2 class="mb-5 fw-bold text-primary">Our Expert Tutors</h2>
+    <div class="row g-4 justify-content-center">
       <div class="col-md-3">
-        <div class="card h-100 shadow">
-          <img src="https://placehold.co/300x300?text=Tutor+Profile+1" class="card-img-top" alt="Tutor image placeholder">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1514361892635-cd8786160c46?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top rounded-top" alt="Female Indian tutor smiling with students in classroom">
           <div class="card-body">
             <h5>Dr. Anjali Sharma</h5>
             <p>Ph.D. Physics | 10+ Years Experience</p>
             <p>Subjects: Physics, Advanced Math</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal">View Profile</button>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal1">View Profile</button>
           </div>
         </div>
       </div>
-      <!-- Repeat tutor cards (3-4 cards total) -->
       <div class="col-md-3">
-        <div class="card h-100 shadow">
-          <img src="https://placehold.co/300x300?text=Tutor+Profile+2" class="card-img-top" alt="">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top rounded-top" alt="Male teacher talking with kids in classroom">
           <div class="card-body">
             <h5>Mr. Rohit Mehra</h5>
             <p>M.Sc. Chemistry | 8 Years Experience</p>
             <p>Subjects: Chemistry, Biology</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal">View Profile</button>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal2">View Profile</button>
           </div>
         </div>
       </div>
       <div class="col-md-3">
-        <div class="card h-100 shadow">
-          <img src="https://placehold.co/300x300?text=Tutor+Profile+3" class="card-img-top" alt="">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top rounded-top" alt="Female tutor explaining with books">
           <div class="card-body">
             <h5>Mrs. Neha Kapoor</h5>
             <p>B.A. English | 6 Years Experience</p>
             <p>Subjects: English, Literature</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal">View Profile</button>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal3">View Profile</button>
           </div>
         </div>
       </div>
       <div class="col-md-3">
-        <div class="card h-100 shadow">
-          <img src="https://placehold.co/300x300?text=Tutor+Profile+4" class="card-img-top" alt="">
+        <div class="card h-100 shadow border-0">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80"
+            class="card-img-top rounded-top" alt="Tutor helping students at desk">
           <div class="card-body">
             <h5>Mr. Arjun Singh</h5>
             <p>B.Tech. CS | 5 Years Experience</p>
             <p>Subjects: Computer Science, Math</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal">View Profile</button>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal4">View Profile</button>
           </div>
         </div>
       </div>
@@ -137,39 +142,39 @@
   </div>
 </section>
 
-<!-- ✅ Subjects -->
-<section id="subjects" class="py-5">
+<!-- Subjects Section -->
+<section id="subjects" class="py-5 bg-white">
   <div class="container text-center">
-    <h2 class="mb-5">Subjects We Cover</h2>
-    <div class="row g-4">
-      <div class="col-md-2 col-6"><i class="bi bi-calculator fs-1 text-primary"></i><p>Mathematics</p></div>
+    <h2 class="mb-5 fw-bold text-primary">Subjects We Cover</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-2 col-6"><i class="bi bi-calculator fs-1 text-accent"></i><p>Math</p></div>
       <div class="col-md-2 col-6"><i class="bi bi-atom fs-1 text-primary"></i><p>Physics</p></div>
-      <div class="col-md-2 col-6"><i class="bi bi-bezier fs-1 text-primary"></i><p>Chemistry</p></div>
-      <div class="col-md-2 col-6"><i class="bi bi-heart-pulse fs-1 text-primary"></i><p>Biology</p></div>
+      <div class="col-md-2 col-6"><i class="bi bi-bezier fs-1 text-secondary"></i><p>Chemistry</p></div>
+      <div class="col-md-2 col-6"><i class="bi bi-heart-pulse fs-1 text-accent"></i><p>Biology</p></div>
       <div class="col-md-2 col-6"><i class="bi bi-book fs-1 text-primary"></i><p>English</p></div>
-      <div class="col-md-2 col-6"><i class="bi bi-code-slash fs-1 text-primary"></i><p>Computer Science</p></div>
+      <div class="col-md-2 col-6"><i class="bi bi-code-slash fs-1 text-secondary"></i><p>Computer Science</p></div>
     </div>
   </div>
 </section>
 
-<!-- ✅ Testimonials -->
+<!-- Testimonials Section -->
 <section id="testimonials" class="py-5 bg-light">
   <div class="container text-center">
-    <h2 class="mb-5">What Parents Say</h2>
+    <h2 class="mb-5 fw-bold text-primary">What Parents Say</h2>
     <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <blockquote class="blockquote">
             <p class="fs-5 fst-italic">"MindBloom Tutors has transformed my son's approach to studies!"</p>
-            <div class="text-warning mb-2">★★★★★</div>
-            <footer>- Priya K., Parent of 10th Grader</footer>
+            <div class="text-accent mb-2">★★★★★</div>
+            <footer class="blockquote-footer">Priya K., Parent of 10th Grader</footer>
           </blockquote>
         </div>
         <div class="carousel-item">
           <blockquote class="blockquote">
             <p class="fs-5 fst-italic">"Amazing tutors who genuinely care about students' success."</p>
-            <div class="text-warning">★★★★★</div>
-            <footer>- Rajesh M., Father of Class 9 Student</footer>
+            <div class="text-accent">★★★★★</div>
+            <footer class="blockquote-footer">Rajesh M., Father of Class 9 Student</footer>
           </blockquote>
         </div>
       </div>
@@ -183,13 +188,13 @@
   </div>
 </section>
 
-<!-- ✅ Pricing -->
-<section id="pricing" class="py-5">
+<!-- Pricing Section -->
+<section id="pricing" class="py-5 bg-white">
   <div class="container text-center">
-    <h2 class="mb-5">Our Plans</h2>
-    <div class="row g-4">
+    <h2 class="mb-5 fw-bold text-primary">Our Plans</h2>
+    <div class="row g-4 justify-content-center">
       <div class="col-md-4">
-        <div class="card shadow">
+        <div class="card shadow border-0">
           <div class="card-body">
             <h5>Basic</h5>
             <p class="fs-3 text-primary mb-3">₹4,999 / month</p>
@@ -217,7 +222,7 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="card shadow">
+        <div class="card shadow border-0">
           <div class="card-body">
             <h5>Premium</h5>
             <p class="fs-3 text-primary">₹8,999 / month</p>
@@ -234,10 +239,10 @@
   </div>
 </section>
 
-<!-- ✅ FAQ -->
+<!-- FAQ Section -->
 <section id="faq" class="py-5 bg-light">
   <div class="container">
-    <h2 class="text-center mb-5">FAQ</h2>
+    <h2 class="text-center mb-5 fw-bold text-primary">FAQ</h2>
     <div class="accordion" id="faqAccordion">
       <div class="accordion-item">
         <h2 class="accordion-header">
@@ -275,7 +280,7 @@
   </div>
 </section>
 
-<!-- ✅ Footer -->
+<!-- Footer -->
 <footer class="py-4 bg-dark text-white">
   <div class="container">
     <div class="row">
@@ -295,8 +300,8 @@
       </div>
       <div class="col-md-4 mb-3">
         <h5>Contact Us</h5>
-        <p><i class="bi bi-telephone"></i> +91-9876543210</p>
-        <p><i class="bi bi-envelope"></i> info@mindbloomtutors.com</p>
+        <p><i class="bi bi-telephone"></i> 8989486507</p>
+        <p><i class="bi bi-envelope"></i> <a href="mailto:sauravvarmag8@gmail.com" class="text-white">sauravvarmag8@gmail.com</a></p>
         <p><i class="bi bi-geo-alt"></i> New Delhi, India</p>
         <div>
           <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
@@ -309,12 +314,11 @@
   </div>
 </footer>
 
-<!-- ✅ Modals -->
 <!-- Consultation Modal -->
 <div class="modal fade" id="consultationModal" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content p-4">
-      <h5 class="modal-title">Schedule Your Free Consultation</h5>
+      <h5 class="modal-title mb-3">Schedule Your Free Consultation</h5>
       <form>
         <div class="mb-3"><input type="text" class="form-control" placeholder="Parent's Name"></div>
         <div class="mb-3"><input type="text" class="form-control" placeholder="Student's Name"></div>
@@ -328,21 +332,57 @@
   </div>
 </div>
 
-<!-- Tutor Profile Modal -->
-<div class="modal fade" id="tutorModal" tabindex="-1">
+<!-- Tutor Profile Modals -->
+<div class="modal fade" id="tutorModal1" tabindex="-1">
   <div class="modal-dialog modal-lg">
     <div class="modal-content p-4 text-center">
-      <img src="https://placehold.co/300x300?text=Tutor+Large+Photo" alt="" class="rounded-circle mb-3">
+      <img src="https://images.unsplash.com/photo-1514361892635-cd8786160c46?auto=format&fit=crop&w=300&q=80"
+        alt="Female tutor" class="rounded-circle mb-3" style="max-width:150px;">
       <h5>Dr. Anjali Sharma</h5>
-      <p>Ph.D. in Physics, 10+ Years of Experience</p>
-      <p>Detailed bio and teaching philosophy here... She believes in conceptual understanding and student confidence building.</p>
-      <p>Expertise: Physics, Advanced Math</p>
+      <p>Ph.D. Physics | 10+ Years Experience</p>
+      <p>Expert in Physics and Advanced Math. Anjali inspires students with interactive lessons and individual attention.</p>
+      <a href="#" class="btn btn-accent">Request This Tutor</a>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="tutorModal2" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-4 text-center">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=300&q=80"
+        alt="Male tutor" class="rounded-circle mb-3" style="max-width:150px;">
+      <h5>Mr. Rohit Mehra</h5>
+      <p>M.Sc. Chemistry | 8 Years Experience</p>
+      <p>Specialist in Chemistry and Biology, Rohit motivates students through hands-on learning and clear explanations.</p>
+      <a href="#" class="btn btn-accent">Request This Tutor</a>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="tutorModal3" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-4 text-center">
+      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80"
+        alt="Female tutor" class="rounded-circle mb-3" style="max-width:150px;">
+      <h5>Mrs. Neha Kapoor</h5>
+      <p>B.A. English | 6 Years Experience</p>
+      <p>English and Literature expert. Neha encourages reading and writing confidence.</p>
+      <a href="#" class="btn btn-accent">Request This Tutor</a>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="tutorModal4" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-4 text-center">
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=300&q=80"
+        alt="Male tutor" class="rounded-circle mb-3" style="max-width:150px;">
+      <h5>Mr. Arjun Singh</h5>
+      <p>B.Tech. CS | 5 Years Experience</p>
+      <p>Arjun specializes in Computer Science and Math. He makes coding fun and logical.</p>
       <a href="#" class="btn btn-accent">Request This Tutor</a>
     </div>
   </div>
 </div>
 
-<!-- JS -->
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
