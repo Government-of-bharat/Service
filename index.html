@@ -1,497 +1,222 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MindBloom Tutors - Personalized Home Tutoring</title>
-    <!-- Bootstrap CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Bootstrap Icons CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <title>EduSpark Tutors | Personalized Home Tutoring in Jabalpur</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2C3E50',      // Deep Indigo
+                        secondary: '#00B894',    // Vibrant Teal
+                        accent: '#FFA500',        // Bright Orange
+                        neutral: {
+                            light: '#F5F7FA',  // Soft Grey
+                            dark: '#34495E',   // Charcoal Grey
+                        },
+                    },
+                    fontFamily: {
+                        heading: ['Montserrat', 'sans-serif'],
+                        body: ['Open Sans', 'sans-serif'],
+                    },
+                },
+            },
+        };
+    </script>
+    
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
-<body>
-    <!-- Navigation Bar -->
-    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-transparent">
-        <div class="container">
-            <a class="navbar-brand" href="#">MindBloom Tutors</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+
+<body class="font-body bg-neutral-light text-neutral-dark">
+
+    <header id="navbar" class="bg-primary/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-heading font-bold text-white">EduSpark Tutors</a>
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="nav-link text-white hover:text-secondary transition">Home</a>
+                <a href="#how-it-works" class="nav-link text-white hover:text-secondary transition">How It Works</a>
+                <a href="#tutors" class="nav-link text-white hover:text-secondary transition">Our Spark</a>
+                <a href="#subjects" class="nav-link text-white hover:text-secondary transition">Subjects</a>
+                <a href="#success-stories" class="nav-link text-white hover:text-secondary transition">Success</a>
+                <a href="#faq" class="nav-link text-white hover:text-secondary transition">FAQ</a>
+            </nav>
+            <button class="open-modal-btn bg-accent hover:bg-orange-600 text-white font-bold py-2 px-5 rounded-full transition-transform duration-300 hover:scale-105">
+                Book Free Trial
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#tutors">Tutors</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-                </ul>
-                <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Free Demo</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="relative min-h-screen flex items-center bg-primary text-white pt-20">
+            <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://placehold.co/1920x1080/2C3E50/FFFFFF?text=Happy+Students');"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-primary via-primary/80 to-primary"></div>
+            <div class="container mx-auto px-6 text-center z-10">
+                <h1 class="text-4xl md:text-6xl font-extrabold font-heading mb-4 leading-tight">Ignite Your Child's Potential in <span class="text-secondary">Jabalpur</span>.</h1>
+                <p class="text-lg md:text-xl text-neutral-light mb-8 max-w-3xl mx-auto">
+                    Personalized home tutoring for academic excellence in Math, Science, English, and beyond. Tailored for success.
+                </p>
+                <div class="flex justify-center items-center space-x-4">
+                    <button class="open-modal-btn bg-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 hover:scale-105 shadow-lg">
+                        Start Free Trial Today
+                    </button>
+                    <a href="#subjects" class="text-neutral-light hover:text-secondary transition group">
+                        Explore Our Programs <span class="inline-block transition-transform group-hover:translate-x-1">&#8594;</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </nav>
+            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+                <svg class="w-6 h-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero d-flex align-items-center text-center text-white">
-        <div class="container">
-            <h1 class="display-3 fw-bold">Unlock Your Child's Full Potential</h1>
-            <p class="lead">Personalized, one-on-one home tutoring from certified experts in Math, Science, English, and more.</p>
-            <button class="btn btn-accent btn-lg" data-bs-toggle="modal" data-bs-target="#consultationModal">Book a Free Consultation</button>
-            <p class="mt-3"><a href="#tutors" class="text-white">See Our Tutors →</a></p>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="py-5 bg-neutral">
-        <div class="container">
-            <h2 class="text-center mb-5">How It Works</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card text-center border-0 shadow-sm">
-                        <div class="card-body">
-                            <i class="bi bi-person-check display-4 text-primary mb-3"></i>
-                            <h5 class="card-title">Consult & Match</h5>
-                            <p class="card-text">Start with a free consultation to understand your needs and match your child with the perfect tutor.</p>
-                        </div>
+        <section id="how-it-works" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading text-primary mb-2">Our Spark Process</h2>
+                <p class="text-neutral-dark mb-12">A simple, effective path to academic brilliance.</p>
+                <div class="grid md:grid-cols-3 gap-12">
+                    <div class="text-center">
+                        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_z4s3ba9s.json" background="transparent" speed="1" style="width: 150px; height: 150px; margin: auto;" loop autoplay></lottie-player>
+                        <h3 class="text-2xl font-bold font-heading text-primary mt-4 mb-2">1. Discover & Design</h3>
+                        <p>Free assessment to understand your child's needs, followed by a personalized learning plan.</p>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card text-center border-0 shadow-sm">
-                        <div class="card-body">
-                            <i class="bi bi-lightbulb display-4 text-primary mb-3"></i>
-                            <h5 class="card-title">Personalized Learning</h5>
-                            <p class="card-text">Enjoy customized lesson plans and one-on-one attention tailored to your child's learning style.</p>
-                        </div>
+                    <div class="text-center">
+                        <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_x9iGIp.json" background="transparent" speed="1" style="width: 150px; height: 150px; margin: auto;" loop autoplay></lottie-player>
+                        <h3 class="text-2xl font-bold font-heading text-primary mt-4 mb-2">2. Learn & Grow</h3>
+                        <p>Engaging 1-on-1 sessions with expert tutors using interactive and proven teaching methods.</p>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card text-center border-0 shadow-sm">
-                        <div class="card-body">
-                            <i class="bi bi-graph-up display-4 text-primary mb-3"></i>
-                            <h5 class="card-title">Track Progress</h5>
-                            <p class="card-text">Receive regular assessments and progress reports to keep parents informed and on track.</p>
-                        </div>
+                    <div class="text-center">
+                        <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_m6a2y0f8.json" background="transparent" speed="1" style="width: 150px; height: 150px; margin: auto;" loop autoplay></lottie-player>
+                        <h3 class="text-2xl font-bold font-heading text-primary mt-4 mb-2">3. Track & Triumph</h3>
+                        <p>Regular progress reports and feedback to celebrate milestones and ensure goal achievement.</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Our Expert Tutors Section -->
-    <section id="tutors" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Our Expert Tutors</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow-sm">
-                        <!-- Placeholder for professional headshot: Diverse tutor, friendly smile, warm natural light -->
-                        <img src="https://placehold.co/400x300?text=Tutor+Headshot" class="card-img-top" alt="Dr. Anjali Sharma Headshot">
-                        <div class="card-body">
-                            <h5 class="card-title">Dr. Anjali Sharma</h5>
-                            <p class="card-text">Ph.D. in Physics, 10+ Years Experience<br>Subjects: Physics, Advanced Math</p>
-                            <p class="card-text">Passionate about making complex concepts simple and fun.</p>
-                            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tutorModal1">View Profile</button>
+        <section id="tutors" class="py-20 bg-neutral-light">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading text-primary mb-2">Meet Our Spark Gurus</h2>
+                <p class="text-neutral-dark mb-12">Certified, passionate, and experienced tutors from Jabalpur.</p>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img loading="lazy" src="https://placehold.co/150x150/00B894/FFFFFF?text=DS" alt="Tutor Deepika Singh" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-secondary">
+                        <h3 class="text-xl font-bold font-heading text-primary">Ms. Deepika Singh</h3>
+                        <p class="text-neutral-dark mb-2">Expert in JEE/NEET Physics</p>
+                        <span class="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1 rounded-full">Certified Expert</span>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="open-tutor-modal-btn text-accent font-bold">View Profile</button>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow-sm">
-                        <!-- Placeholder for professional headshot: Diverse tutor, friendly smile, warm natural light -->
-                        <img src="https://placehold.co/400x300?text=Tutor+Headshot" class="card-img-top" alt="Mr. Raj Patel Headshot">
-                        <div class="card-body">
-                            <h5 class="card-title">Mr. Raj Patel</h5>
-                            <p class="card-text">M.A. in English, 8+ Years Experience<br>Subjects: English, Literature</p>
-                            <p class="card-text">Helps students develop a love for reading and writing.</p>
-                            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tutorModal2">View Profile</button>
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img loading="lazy" src="https://placehold.co/150x150/FFA500/FFFFFF?text=AS" alt="Tutor Ankit Sharma" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
+                        <h3 class="text-xl font-bold font-heading text-primary">Mr. Ankit Sharma</h3>
+                        <p class="text-neutral-dark mb-2">MP Board Maths Specialist</p>
+                        <span class="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1 rounded-full">Certified Expert</span>
+                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="open-tutor-modal-btn text-accent font-bold">View Profile</button>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow-sm">
-                        <!-- Placeholder for professional headshot: Diverse tutor, friendly smile, warm natural light -->
-                        <img src="https://placehold.co/400x300?text=Tutor+Headshot" class="card-img-top" alt="Ms. Sofia Ramirez Headshot">
-                        <div class="card-body">
-                            <h5 class="card-title">Ms. Sofia Ramirez</h5>
-                            <p class="card-text">B.S. in Biology, 12+ Years Experience<br>Subjects: Biology, Chemistry</p>
-                            <p class="card-text">Uses real-world examples to bring science to life.</p>
-                            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tutorModal3">View Profile</button>
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img loading="lazy" src="https://placehold.co/150x150/2C3E50/FFFFFF?text=RP" alt="Tutor Riya Patel" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary">
+                        <h3 class="text-xl font-bold font-heading text-primary">Ms. Riya Patel</h3>
+                        <p class="text-neutral-dark mb-2">English & NTSE Prep</p>
+                        <span class="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1 rounded-full">Certified Expert</span>
+                         <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="open-tutor-modal-btn text-accent font-bold">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 text-center group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                        <img loading="lazy" src="https://placehold.co/150x150/34495E/FFFFFF?text=VK" alt="Tutor Vikram Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-neutral-dark">
+                        <h3 class="text-xl font-bold font-heading text-primary">Mr. Vikram Kumar</h3>
+                        <p class="text-neutral-dark mb-2">Vedic Maths & Science</p>
+                        <span class="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1 rounded-full">Certified Expert</span>
+                         <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                            <button class="open-tutor-modal-btn text-accent font-bold">View Profile</button>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Subjects We Cover Section -->
-    <section id="subjects" class="py-5 bg-neutral">
-        <div class="container">
-            <h2 class="text-center mb-5">Subjects We Cover</h2>
-            <div class="row text-center">
-                <div class="col-md-3 mb-4">
-                    <i class="bi bi-calculator display-4 text-primary mb-3"></i>
-                    <h5>Mathematics</h5>
+        </section>
+        
+        </main>
+    
+    <div id="trial-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-lg relative transform scale-95 transition-transform duration-300">
+            <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-2xl font-bold font-heading text-primary mb-2">Ignite Your Journey: Schedule a Free Trial</h3>
+            <p class="text-neutral-dark mb-6">Let's find the perfect Spark Guru for your child.</p>
+            <form>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <input type="text" placeholder="Parent's Full Name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
+                    <input type="text" placeholder="Student's Full Name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
                 </div>
-                <div class="col-md-3 mb-4">
-                    <i class="bi bi-atom display-4 text-primary mb-3"></i>
-                    <h5>Physics</h5>
+                <div class="mt-4">
+                    <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
                 </div>
-                <div class="col-md-3 mb-4">
-                    <i class="bi bi-flask display-4 text-primary mb-3"></i>
-                    <h5>Chemistry</h5>
+                <div class="mt-4">
+                    <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
                 </div>
-                <div class="col-md-3 mb-4">
-                    <i class="bi bi-dna display-4 text-primary mb-3"></i>
-                    <h5>Biology</h5>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                     <input type="text" placeholder="Grade Level (e.g., Class 10)" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
+                    <select class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
+                        <option>Preferred Subject</option>
+                        <option>Maths</option>
+                        <option>Science</option>
+                        <option>English</option>
+                        <option>Competitive Exams</option>
+                    </select>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <i class="bi bi-book display-4 text-primary mb-3"></i>
-                    <h5>English</h5>
+                <div class="mt-6">
+                    <button type="submit" class="w-full bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition-transform duration-300 hover:scale-105">Request Free Trial</button>
                 </div>
-                <div class="col-md-3 mb-4">
-                    <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
-                    <h5>Computer Science</h5>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <i class="bi bi-globe display-4 text-primary mb-3"></i>
-                    <h5>History</h5>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <i class="bi bi-geo-alt display-4 text-primary mb-3"></i>
-                    <h5>Geography</h5>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">What Parents Say</h2>
-            <div id="testimonialCarousel" class="carousel slide">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card border-0 shadow-sm text-center mx-auto" style="max-width: 600px;">
-                            <div class="card-body">
-                                <p class="card-text fst-italic">"MindBloom transformed my child's approach to math. The tutor was fantastic!"</p>
-                                <div class="mb-2">
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                </div>
-                                <p class="card-text"><small>Priya K., Parent of a 10th Grader</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card border-0 shadow-sm text-center mx-auto" style="max-width: 600px;">
-                            <div class="card-body">
-                                <p class="card-text fst-italic">"Personalized attention made all the difference. Highly recommend!"</p>
-                                <div class="mb-2">
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                </div>
-                                <p class="card-text"><small>Amit S., Parent of a 8th Grader</small></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card border-0 shadow-sm text-center mx-auto" style="max-width: 600px;">
-                            <div class="card-body">
-                                <p class="card-text fst-italic">"Excellent tutors and great progress tracking. Worth every penny."</p>
-                                <div class="mb-2">
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                    <i class="bi bi-star-fill text-accent"></i>
-                                </div>
-                                <p class="card-text"><small>Laura M., Parent of a 12th Grader</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-5 bg-neutral">
-        <div class="container">
-            <h2 class="text-center mb-5">Pricing Plans</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow-sm text-center">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="my-0">Basic</h5>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">$99 <small>/month</small></h3>
-                            <ul class="list-unstyled">
-                                <li>8 sessions/month</li>
-                                <li>Progress reports</li>
-                                <li>Certified tutors</li>
-                            </ul>
-                            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow-sm text-center">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="my-0">Standard</h5>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">$149 <small>/month</small></h3>
-                            <ul class="list-unstyled">
-                                <li>12 sessions/month</li>
-                                <li>Progress reports</li>
-                                <li>24/7 support</li>
-                            </ul>
-                            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card border-0 shadow-sm text-center">
-                        <div class="card-header bg-primary text-white">
-                            <h5 class="my-0">Premium</h5>
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">$199 <small>/month</small></h3>
-                            <ul class="list-unstyled">
-                                <li>16 sessions/month</li>
-                                <li>Progress reports</li>
-                                <li>24/7 support + extras</li>
-                            </ul>
-                            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading1">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
-                            What are the qualifications of your tutors?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            All our tutors are certified experts with advanced degrees and years of teaching experience.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                            Is there a long-term contract?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            No, we offer flexible month-to-month plans with no long-term commitments.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                            How do you track student progress?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We provide regular assessments and detailed progress reports to parents.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeading4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                            What if we are not satisfied?
-                        </button>
-                    </h2>
-                    <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            We offer a satisfaction guarantee and will match you with a new tutor if needed.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-primary text-white py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>MindBloom Tutors</h5>
-                    <p>Empowering students to bloom through personalized education.</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#home" class="text-white">Home</a></li>
-                        <li><a href="#how-it-works" class="text-white">How It Works</a></li>
-                        <li><a href="#tutors" class="text-white">Tutors</a></li>
-                        <li><a href="#subjects" class="text-white">Subjects</a></li>
-                        <li><a href="#testimonials" class="text-white">Testimonials</a></li>
-                        <li><a href="#faq" class="text-white">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>Phone: (123) 456-7890<br>Email: info@mindbloomtutors.com<br>Address: 123 Education St, City, State</p>
-                    <div>
-                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
-                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-                    </div>
-                </div>
-            </div>
-            <hr class="bg-white">
-            <p class="text-center mb-0">&copy; 2025 MindBloom Tutors. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Consultation Modal -->
-    <div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="consultationModalLabel">Schedule Your Free Consultation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="mb-3">
-                            <label for="parentName" class="form-label">Parent's Name</label>
-                            <input type="text" class="form-control" id="parentName">
-                        </div>
-                        <div class="mb-3">
-                            <label for="studentName" class="form-label">Student's Name</label>
-                            <input type="text" class="form-control" id="studentName">
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input type="tel" class="form-control" id="phone">
-                        </div>
-                        <div class="mb-3">
-                            <label for="grade" class="form-label">Grade Level</label>
-                            <input type="text" class="form-control" id="grade">
-                        </div>
-                        <div class="mb-3">
-                            <label for="subjects" class="form-label">Subject(s) of Interest</label>
-                            <textarea class="form-control" id="subjects" rows="3"></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-accent">Request My Demo</button>
-                </div>
-            </div>
+                <p class="text-xs text-gray-500 mt-4 text-center">Your information is safe with us.</p>
+            </form>
         </div>
     </div>
 
-    <!-- Tutor Profile Modals -->
-    <div class="modal fade" id="tutorModal1" tabindex="-1" aria-labelledby="tutorModalLabel1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="tutorModalLabel1">Dr. Anjali Sharma</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <div id="tutor-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-2xl relative transform scale-95 transition-transform duration-300">
+             <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="flex-shrink-0">
+                    <img loading="lazy" src="https://placehold.co/150x150/00B894/FFFFFF?text=DS" alt="Tutor Deepika Singh" class="w-32 h-32 rounded-full mx-auto md:mx-0 border-4 border-secondary">
                 </div>
-                <div class="modal-body">
-                    <!-- Placeholder for larger photo: Diverse tutor, friendly smile, warm natural light -->
-                    <img src="https://placehold.co/600x400?text=Tutor+Profile+Photo" class="img-fluid mb-3" alt="Dr. Anjali Sharma Profile">
-                    <p><strong>Educational Background:</strong> Ph.D. in Physics from IIT Delhi</p>
-                    <p><strong>Teaching Philosophy:</strong> Believe in hands-on learning to make physics accessible.</p>
-                    <p><strong>Expertise:</strong> Physics, Advanced Math, Quantum Mechanics</p>
-                    <p>Dr. Sharma has over 10 years of experience helping students excel in STEM subjects.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-accent" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#consultationModal">Request This Tutor</button>
+                <div>
+                     <h3 class="text-3xl font-bold font-heading text-primary">Ms. Deepika Singh</h3>
+                     <p class="text-accent font-semibold text-lg">Expert in JEE/NEET Physics</p>
+                     <p class="mt-4 text-neutral-dark">A passionate educator with 8+ years of experience, holding an M.Sc. in Physics from Rani Durgavati Vishwavidyalaya, Jabalpur. My teaching philosophy is to make complex concepts simple and intuitive.</p>
                 </div>
             </div>
+             <div class="mt-6">
+                 <h4 class="text-xl font-bold font-heading text-primary mb-2">Expertise</h4>
+                 <div class="flex flex-wrap gap-2">
+                     <span class="bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">Mechanics</span>
+                     <span class="bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">Electromagnetism</span>
+                     <span class="bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">Thermodynamics</span>
+                     <span class="bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">Optics</span>
+                 </div>
+             </div>
+             <div class="mt-6">
+                  <button class="w-full bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition-transform duration-300 hover:scale-105">Request This Tutor for a Trial</button>
+             </div>
         </div>
     </div>
 
-    <div class="modal fade" id="tutorModal2" tabindex="-1" aria-labelledby="tutorModalLabel2" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="tutorModalLabel2">Mr. Raj Patel</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Placeholder for larger photo: Diverse tutor, friendly smile, warm natural light -->
-                    <img src="https://placehold.co/600x400?text=Tutor+Profile+Photo" class="img-fluid mb-3" alt="Mr. Raj Patel Profile">
-                    <p><strong>Educational Background:</strong> M.A. in English from University of Mumbai</p>
-                    <p><strong>Teaching Philosophy:</strong> Encourage creative expression and critical thinking.</p>
-                    <p><strong>Expertise:</strong> English, Literature, Essay Writing</p>
-                    <p>Mr. Patel specializes in building confidence in language arts for all ages.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-accent" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#consultationModal">Request This Tutor</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="modal fade" id="tutorModal3" tabindex="-1" aria-labelledby="tutorModalLabel3" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="tutorModalLabel3">Ms. Sofia Ramirez</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <!-- Placeholder for larger photo: Diverse tutor, friendly smile, warm natural light -->
-                    <img src="https://placehold.co/600x400?text=Tutor+Profile+Photo" class="img-fluid mb-3" alt="Ms. Sofia Ramirez Profile">
-                    <p><strong>Educational Background:</strong> B.S. in Biology from Stanford University</p>
-                    <p><strong>Teaching Philosophy:</strong> Use interactive methods to explore the wonders of science.</p>
-                    <p><strong>Expertise:</strong> Biology, Chemistry, Environmental Science</p>
-                    <p>Ms. Ramirez has 12+ years inspiring young minds in the sciences.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-accent" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#consultationModal">Request This Tutor</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
