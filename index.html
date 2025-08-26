@@ -1,389 +1,497 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MindBloom Tutors</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lato:wght@400;500&display=swap" rel="stylesheet">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBloom Tutors - Personalized Home Tutoring</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-dark bg-transparent">
+        <div class="container">
+            <a class="navbar-brand" href="#">MindBloom Tutors</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tutors">Tutors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+                </ul>
+                <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Free Demo</button>
+            </div>
+        </div>
+    </nav>
 
-<!-- Navbar -->
-<nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light">
-  <div class="container">
-    <a class="navbar-brand fw-bold text-primary" href="#">MindBloom Tutors</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ms-auto me-3 text-dark">
-        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="#tutors">Tutors</a></li>
-        <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
-        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-      </ul>
-      <a href="#" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Free Demo</a>
-    </div>
-  </div>
-</nav>
+    <!-- Hero Section -->
+    <section id="home" class="hero d-flex align-items-center text-center text-white">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Unlock Your Child's Full Potential</h1>
+            <p class="lead">Personalized, one-on-one home tutoring from certified experts in Math, Science, English, and more.</p>
+            <button class="btn btn-accent btn-lg" data-bs-toggle="modal" data-bs-target="#consultationModal">Book a Free Consultation</button>
+            <p class="mt-3"><a href="#tutors" class="text-white">See Our Tutors →</a></p>
+        </div>
+    </section>
 
-<!-- Hero Section -->
-<header id="hero" class="hero-bg d-flex align-items-center" style="min-height: 95vh;">
-  <div class="container position-relative z-2">
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
-        <h1 class="display-5 fw-bold text-primary mb-3">Unlock Your Child's <span class="text-accent">Potential</span></h1>
-        <p class="lead mb-4 text-dark">Expert home tutors for K-12. Personalized learning in Math, Science, English, and more.</p>
-        <a href="#" class="btn btn-accent btn-lg me-2" data-bs-toggle="modal" data-bs-target="#consultationModal">Book a Free Consultation</a>
-        <a href="#tutors" class="d-block mt-3 text-secondary text-decoration-underline">See Our Tutors →</a>
-      </div>
-      <div class="col-md-6 text-center">
-        <!-- SVG Illustration: happy kids and tutor -->
-        <img src="https://raw.githubusercontent.com/storyset/illustrations/master/svg/kids-learning/rafiki.svg" alt="Children with tutors illustration" class="img-fluid" style="max-height:350px;">
-        <!-- Replace SVG with real classroom photo if you like -->
-      </div>
-    </div>
-  </div>
-</header>
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-5 bg-neutral">
+        <div class="container">
+            <h2 class="text-center mb-5">How It Works</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-person-check display-4 text-primary mb-3"></i>
+                            <h5 class="card-title">Consult & Match</h5>
+                            <p class="card-text">Start with a free consultation to understand your needs and match your child with the perfect tutor.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-lightbulb display-4 text-primary mb-3"></i>
+                            <h5 class="card-title">Personalized Learning</h5>
+                            <p class="card-text">Enjoy customized lesson plans and one-on-one attention tailored to your child's learning style.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center border-0 shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-graph-up display-4 text-primary mb-3"></i>
+                            <h5 class="card-title">Track Progress</h5>
+                            <p class="card-text">Receive regular assessments and progress reports to keep parents informed and on track.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- How It Works -->
-<section id="how-it-works" class="py-5 bg-white">
-  <div class="container text-center">
-    <h2 class="mb-4 fw-bold text-primary">How It Works</h2>
-    <div class="row gy-4">
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 p-4">
-          <i class="bi bi-person-check display-5 text-accent mb-2"></i>
-          <h5>Consult & Match</h5>
-          <p>Free consultation to match your child with the perfect tutor.</p>
+    <!-- Our Expert Tutors Section -->
+    <section id="tutors" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Our Expert Tutors</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <!-- Placeholder for professional headshot: Diverse tutor, friendly smile, warm natural light -->
+                        <img src="https://placehold.co/400x300?text=Tutor+Headshot" class="card-img-top" alt="Dr. Anjali Sharma Headshot">
+                        <div class="card-body">
+                            <h5 class="card-title">Dr. Anjali Sharma</h5>
+                            <p class="card-text">Ph.D. in Physics, 10+ Years Experience<br>Subjects: Physics, Advanced Math</p>
+                            <p class="card-text">Passionate about making complex concepts simple and fun.</p>
+                            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tutorModal1">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <!-- Placeholder for professional headshot: Diverse tutor, friendly smile, warm natural light -->
+                        <img src="https://placehold.co/400x300?text=Tutor+Headshot" class="card-img-top" alt="Mr. Raj Patel Headshot">
+                        <div class="card-body">
+                            <h5 class="card-title">Mr. Raj Patel</h5>
+                            <p class="card-text">M.A. in English, 8+ Years Experience<br>Subjects: English, Literature</p>
+                            <p class="card-text">Helps students develop a love for reading and writing.</p>
+                            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tutorModal2">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm">
+                        <!-- Placeholder for professional headshot: Diverse tutor, friendly smile, warm natural light -->
+                        <img src="https://placehold.co/400x300?text=Tutor+Headshot" class="card-img-top" alt="Ms. Sofia Ramirez Headshot">
+                        <div class="card-body">
+                            <h5 class="card-title">Ms. Sofia Ramirez</h5>
+                            <p class="card-text">B.S. in Biology, 12+ Years Experience<br>Subjects: Biology, Chemistry</p>
+                            <p class="card-text">Uses real-world examples to bring science to life.</p>
+                            <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#tutorModal3">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 p-4">
-          <i class="bi bi-lightbulb display-5 text-primary mb-2"></i>
-          <h5>Personalized Learning</h5>
-          <p>Customized lesson plans and one-on-one attention for your child.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm border-0 p-4">
-          <i class="bi bi-bar-chart-line display-5 text-secondary mb-2"></i>
-          <h5>Track Progress</h5>
-          <p>Regular assessments and detailed progress reports for parents.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Tutors Section -->
-<section id="tutors" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="mb-5 fw-bold text-primary">Our Expert Tutors</h2>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-3">
-        <div class="card h-100 shadow border-0">
-          <img src="https://images.unsplash.com/photo-1514361892635-cd8786160c46?auto=format&fit=crop&w=400&q=80"
-            class="card-img-top rounded-top" alt="Female Indian tutor smiling with students in classroom">
-          <div class="card-body">
-            <h5>Dr. Anjali Sharma</h5>
-            <p>Ph.D. Physics | 10+ Years Experience</p>
-            <p>Subjects: Physics, Advanced Math</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal1">View Profile</button>
-          </div>
+    <!-- Subjects We Cover Section -->
+    <section id="subjects" class="py-5 bg-neutral">
+        <div class="container">
+            <h2 class="text-center mb-5">Subjects We Cover</h2>
+            <div class="row text-center">
+                <div class="col-md-3 mb-4">
+                    <i class="bi bi-calculator display-4 text-primary mb-3"></i>
+                    <h5>Mathematics</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <i class="bi bi-atom display-4 text-primary mb-3"></i>
+                    <h5>Physics</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <i class="bi bi-flask display-4 text-primary mb-3"></i>
+                    <h5>Chemistry</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <i class="bi bi-dna display-4 text-primary mb-3"></i>
+                    <h5>Biology</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <i class="bi bi-book display-4 text-primary mb-3"></i>
+                    <h5>English</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <i class="bi bi-code-slash display-4 text-primary mb-3"></i>
+                    <h5>Computer Science</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <i class="bi bi-globe display-4 text-primary mb-3"></i>
+                    <h5>History</h5>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <i class="bi bi-geo-alt display-4 text-primary mb-3"></i>
+                    <h5>Geography</h5>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card h-100 shadow border-0">
-          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80"
-            class="card-img-top rounded-top" alt="Male teacher talking with kids in classroom">
-          <div class="card-body">
-            <h5>Mr. Rohit Mehra</h5>
-            <p>M.Sc. Chemistry | 8 Years Experience</p>
-            <p>Subjects: Chemistry, Biology</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal2">View Profile</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card h-100 shadow border-0">
-          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
-            class="card-img-top rounded-top" alt="Female tutor explaining with books">
-          <div class="card-body">
-            <h5>Mrs. Neha Kapoor</h5>
-            <p>B.A. English | 6 Years Experience</p>
-            <p>Subjects: English, Literature</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal3">View Profile</button>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3">
-        <div class="card h-100 shadow border-0">
-          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=400&q=80"
-            class="card-img-top rounded-top" alt="Tutor helping students at desk">
-          <div class="card-body">
-            <h5>Mr. Arjun Singh</h5>
-            <p>B.Tech. CS | 5 Years Experience</p>
-            <p>Subjects: Computer Science, Math</p>
-            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal4">View Profile</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Subjects Section -->
-<section id="subjects" class="py-5 bg-white">
-  <div class="container text-center">
-    <h2 class="mb-5 fw-bold text-primary">Subjects We Cover</h2>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-2 col-6"><i class="bi bi-calculator fs-1 text-accent"></i><p>Math</p></div>
-      <div class="col-md-2 col-6"><i class="bi bi-atom fs-1 text-primary"></i><p>Physics</p></div>
-      <div class="col-md-2 col-6"><i class="bi bi-bezier fs-1 text-secondary"></i><p>Chemistry</p></div>
-      <div class="col-md-2 col-6"><i class="bi bi-heart-pulse fs-1 text-accent"></i><p>Biology</p></div>
-      <div class="col-md-2 col-6"><i class="bi bi-book fs-1 text-primary"></i><p>English</p></div>
-      <div class="col-md-2 col-6"><i class="bi bi-code-slash fs-1 text-secondary"></i><p>Computer Science</p></div>
-    </div>
-  </div>
-</section>
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What Parents Say</h2>
+            <div id="testimonialCarousel" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card border-0 shadow-sm text-center mx-auto" style="max-width: 600px;">
+                            <div class="card-body">
+                                <p class="card-text fst-italic">"MindBloom transformed my child's approach to math. The tutor was fantastic!"</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                </div>
+                                <p class="card-text"><small>Priya K., Parent of a 10th Grader</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card border-0 shadow-sm text-center mx-auto" style="max-width: 600px;">
+                            <div class="card-body">
+                                <p class="card-text fst-italic">"Personalized attention made all the difference. Highly recommend!"</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                </div>
+                                <p class="card-text"><small>Amit S., Parent of a 8th Grader</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card border-0 shadow-sm text-center mx-auto" style="max-width: 600px;">
+                            <div class="card-body">
+                                <p class="card-text fst-italic">"Excellent tutors and great progress tracking. Worth every penny."</p>
+                                <div class="mb-2">
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                    <i class="bi bi-star-fill text-accent"></i>
+                                </div>
+                                <p class="card-text"><small>Laura M., Parent of a 12th Grader</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2 class="mb-5 fw-bold text-primary">What Parents Say</h2>
-    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <blockquote class="blockquote">
-            <p class="fs-5 fst-italic">"MindBloom Tutors has transformed my son's approach to studies!"</p>
-            <div class="text-accent mb-2">★★★★★</div>
-            <footer class="blockquote-footer">Priya K., Parent of 10th Grader</footer>
-          </blockquote>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-5 bg-neutral">
+        <div class="container">
+            <h2 class="text-center mb-5">Pricing Plans</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm text-center">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="my-0">Basic</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">$99 <small>/month</small></h3>
+                            <ul class="list-unstyled">
+                                <li>8 sessions/month</li>
+                                <li>Progress reports</li>
+                                <li>Certified tutors</li>
+                            </ul>
+                            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm text-center">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="my-0">Standard</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">$149 <small>/month</small></h3>
+                            <ul class="list-unstyled">
+                                <li>12 sessions/month</li>
+                                <li>Progress reports</li>
+                                <li>24/7 support</li>
+                            </ul>
+                            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card border-0 shadow-sm text-center">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="my-0">Premium</h5>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">$199 <small>/month</small></h3>
+                            <ul class="list-unstyled">
+                                <li>16 sessions/month</li>
+                                <li>Progress reports</li>
+                                <li>24/7 support + extras</li>
+                            </ul>
+                            <button class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="carousel-item">
-          <blockquote class="blockquote">
-            <p class="fs-5 fst-italic">"Amazing tutors who genuinely care about students' success."</p>
-            <div class="text-accent">★★★★★</div>
-            <footer class="blockquote-footer">Rajesh M., Father of Class 9 Student</footer>
-          </blockquote>
-        </div>
-      </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Pricing Section -->
-<section id="pricing" class="py-5 bg-white">
-  <div class="container text-center">
-    <h2 class="mb-5 fw-bold text-primary">Our Plans</h2>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-4">
-        <div class="card shadow border-0">
-          <div class="card-body">
-            <h5>Basic</h5>
-            <p class="fs-3 text-primary mb-3">₹4,999 / month</p>
-            <ul class="list-unstyled">
-              <li>8 Sessions</li>
-              <li>Progress Reports</li>
-              <li>Email Support</li>
-            </ul>
-            <a href="#" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</a>
-          </div>
+    <!-- FAQ Section -->
+    <section id="faq" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="false" aria-controls="faqCollapse1">
+                            What are the qualifications of your tutors?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse1" class="accordion-collapse collapse" aria-labelledby="faqHeading1" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            All our tutors are certified experts with advanced degrees and years of teaching experience.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                            Is there a long-term contract?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            No, we offer flexible month-to-month plans with no long-term commitments.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                            How do you track student progress?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We provide regular assessments and detailed progress reports to parents.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                            What if we are not satisfied?
+                        </button>
+                    </h2>
+                    <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHeading4" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            We offer a satisfaction guarantee and will match you with a new tutor if needed.
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow border-primary">
-          <div class="card-body">
-            <h5>Standard</h5>
-            <p class="fs-3 text-primary">₹6,999 / month</p>
-            <ul class="list-unstyled">
-              <li>12 Sessions</li>
-              <li>Progress Reports</li>
-              <li>24/7 Chat Support</li>
-            </ul>
-            <a href="#" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card shadow border-0">
-          <div class="card-body">
-            <h5>Premium</h5>
-            <p class="fs-3 text-primary">₹8,999 / month</p>
-            <ul class="list-unstyled">
-              <li>16 Sessions</li>
-              <li>Detailed Reports</li>
-              <li>Priority Tutor Selection</li>
-            </ul>
-            <a href="#" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- FAQ Section -->
-<section id="faq" class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-5 fw-bold text-primary">FAQ</h2>
-    <div class="accordion" id="faqAccordion">
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">What are the qualifications of your tutors?</button>
-        </h2>
-        <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">All tutors hold advanced degrees and years of practical teaching experience.</div>
+    <!-- Footer -->
+    <footer class="bg-primary text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>MindBloom Tutors</h5>
+                    <p>Empowering students to bloom through personalized education.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Home</a></li>
+                        <li><a href="#how-it-works" class="text-white">How It Works</a></li>
+                        <li><a href="#tutors" class="text-white">Tutors</a></li>
+                        <li><a href="#subjects" class="text-white">Subjects</a></li>
+                        <li><a href="#testimonials" class="text-white">Testimonials</a></li>
+                        <li><a href="#faq" class="text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Phone: (123) 456-7890<br>Email: info@mindbloomtutors.com<br>Address: 123 Education St, City, State</p>
+                    <div>
+                        <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <p class="text-center mb-0">&copy; 2025 MindBloom Tutors. All rights reserved.</p>
         </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Is there a long-term contract?</button>
-        </h2>
-        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">No, all our plans are monthly. You can upgrade or cancel anytime.</div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">How do you track student progress?</button>
-        </h2>
-        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">We conduct regular assessments and provide progress reports to parents.</div>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">What if we are not satisfied?</button>
-        </h2>
-        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">We guarantee satisfaction, and if not, we provide immediate tutor replacement.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </footer>
 
-<!-- Footer -->
-<footer class="py-4 bg-dark text-white">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 mb-3">
-        <h5>MindBloom Tutors</h5>
-        <p>Empowering students with knowledge and personalized home tutoring.</p>
-      </div>
-      <div class="col-md-4 mb-3">
-        <h5>Quick Links</h5>
-        <ul class="list-unstyled">
-          <li><a href="#hero" class="text-white">Home</a></li>
-          <li><a href="#how-it-works" class="text-white">How It Works</a></li>
-          <li><a href="#tutors" class="text-white">Tutors</a></li>
-          <li><a href="#subjects" class="text-white">Subjects</a></li>
-          <li><a href="#faq" class="text-white">FAQ</a></li>
-        </ul>
-      </div>
-      <div class="col-md-4 mb-3">
-        <h5>Contact Us</h5>
-        <p><i class="bi bi-telephone"></i> 8989486507</p>
-        <p><i class="bi bi-envelope"></i> <a href="mailto:sauravvarmag8@gmail.com" class="text-white">sauravvarmag8@gmail.com</a></p>
-        <p><i class="bi bi-geo-alt"></i> New Delhi, India</p>
-        <div>
-          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
-          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+    <!-- Consultation Modal -->
+    <div class="modal fade" id="consultationModal" tabindex="-1" aria-labelledby="consultationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="consultationModalLabel">Schedule Your Free Consultation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="parentName" class="form-label">Parent's Name</label>
+                            <input type="text" class="form-control" id="parentName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="studentName" class="form-label">Student's Name</label>
+                            <input type="text" class="form-control" id="studentName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="grade" class="form-label">Grade Level</label>
+                            <input type="text" class="form-control" id="grade">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subjects" class="form-label">Subject(s) of Interest</label>
+                            <textarea class="form-control" id="subjects" rows="3"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-accent">Request My Demo</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-    <div class="text-center mt-3">&copy; 2025 MindBloom Tutors. All Rights Reserved.</div>
-  </div>
-</footer>
 
-<!-- Consultation Modal -->
-<div class="modal fade" id="consultationModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content p-4">
-      <h5 class="modal-title mb-3">Schedule Your Free Consultation</h5>
-      <form>
-        <div class="mb-3"><input type="text" class="form-control" placeholder="Parent's Name"></div>
-        <div class="mb-3"><input type="text" class="form-control" placeholder="Student's Name"></div>
-        <div class="mb-3"><input type="email" class="form-control" placeholder="Email"></div>
-        <div class="mb-3"><input type="tel" class="form-control" placeholder="Phone Number"></div>
-        <div class="mb-3"><input type="text" class="form-control" placeholder="Grade Level"></div>
-        <div class="mb-3"><input type="text" class="form-control" placeholder="Subject(s) of Interest"></div>
-        <button type="submit" class="btn btn-accent w-100">Request My Demo</button>
-      </form>
+    <!-- Tutor Profile Modals -->
+    <div class="modal fade" id="tutorModal1" tabindex="-1" aria-labelledby="tutorModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tutorModalLabel1">Dr. Anjali Sharma</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Placeholder for larger photo: Diverse tutor, friendly smile, warm natural light -->
+                    <img src="https://placehold.co/600x400?text=Tutor+Profile+Photo" class="img-fluid mb-3" alt="Dr. Anjali Sharma Profile">
+                    <p><strong>Educational Background:</strong> Ph.D. in Physics from IIT Delhi</p>
+                    <p><strong>Teaching Philosophy:</strong> Believe in hands-on learning to make physics accessible.</p>
+                    <p><strong>Expertise:</strong> Physics, Advanced Math, Quantum Mechanics</p>
+                    <p>Dr. Sharma has over 10 years of experience helping students excel in STEM subjects.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-accent" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#consultationModal">Request This Tutor</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 
-<!-- Tutor Profile Modals -->
-<div class="modal fade" id="tutorModal1" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content p-4 text-center">
-      <img src="https://images.unsplash.com/photo-1514361892635-cd8786160c46?auto=format&fit=crop&w=300&q=80"
-        alt="Female tutor" class="rounded-circle mb-3" style="max-width:150px;">
-      <h5>Dr. Anjali Sharma</h5>
-      <p>Ph.D. Physics | 10+ Years Experience</p>
-      <p>Expert in Physics and Advanced Math. Anjali inspires students with interactive lessons and individual attention.</p>
-      <a href="#" class="btn btn-accent">Request This Tutor</a>
+    <div class="modal fade" id="tutorModal2" tabindex="-1" aria-labelledby="tutorModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tutorModalLabel2">Mr. Raj Patel</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Placeholder for larger photo: Diverse tutor, friendly smile, warm natural light -->
+                    <img src="https://placehold.co/600x400?text=Tutor+Profile+Photo" class="img-fluid mb-3" alt="Mr. Raj Patel Profile">
+                    <p><strong>Educational Background:</strong> M.A. in English from University of Mumbai</p>
+                    <p><strong>Teaching Philosophy:</strong> Encourage creative expression and critical thinking.</p>
+                    <p><strong>Expertise:</strong> English, Literature, Essay Writing</p>
+                    <p>Mr. Patel specializes in building confidence in language arts for all ages.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-accent" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#consultationModal">Request This Tutor</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<div class="modal fade" id="tutorModal2" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content p-4 text-center">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=300&q=80"
-        alt="Male tutor" class="rounded-circle mb-3" style="max-width:150px;">
-      <h5>Mr. Rohit Mehra</h5>
-      <p>M.Sc. Chemistry | 8 Years Experience</p>
-      <p>Specialist in Chemistry and Biology, Rohit motivates students through hands-on learning and clear explanations.</p>
-      <a href="#" class="btn btn-accent">Request This Tutor</a>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="tutorModal3" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content p-4 text-center">
-      <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=300&q=80"
-        alt="Female tutor" class="rounded-circle mb-3" style="max-width:150px;">
-      <h5>Mrs. Neha Kapoor</h5>
-      <p>B.A. English | 6 Years Experience</p>
-      <p>English and Literature expert. Neha encourages reading and writing confidence.</p>
-      <a href="#" class="btn btn-accent">Request This Tutor</a>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="tutorModal4" tabindex="-1">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content p-4 text-center">
-      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=300&q=80"
-        alt="Male tutor" class="rounded-circle mb-3" style="max-width:150px;">
-      <h5>Mr. Arjun Singh</h5>
-      <p>B.Tech. CS | 5 Years Experience</p>
-      <p>Arjun specializes in Computer Science and Math. He makes coding fun and logical.</p>
-      <a href="#" class="btn btn-accent">Request This Tutor</a>
-    </div>
-  </div>
-</div>
 
-<!-- Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script src="script.js"></script>
+    <div class="modal fade" id="tutorModal3" tabindex="-1" aria-labelledby="tutorModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="tutorModalLabel3">Ms. Sofia Ramirez</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Placeholder for larger photo: Diverse tutor, friendly smile, warm natural light -->
+                    <img src="https://placehold.co/600x400?text=Tutor+Profile+Photo" class="img-fluid mb-3" alt="Ms. Sofia Ramirez Profile">
+                    <p><strong>Educational Background:</strong> B.S. in Biology from Stanford University</p>
+                    <p><strong>Teaching Philosophy:</strong> Use interactive methods to explore the wonders of science.</p>
+                    <p><strong>Expertise:</strong> Biology, Chemistry, Environmental Science</p>
+                    <p>Ms. Ramirez has 12+ years inspiring young minds in the sciences.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-accent" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#consultationModal">Request This Tutor</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
 </body>
 </html>
