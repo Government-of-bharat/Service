@@ -15,36 +15,28 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#2C3E50',      // Deep Indigo
-                        secondary: '#00B894',    // Vibrant Teal
-                        accent: '#FFA500',        // Bright Orange
-                        neutral: {
-                            light: '#F5F7FA',  // Soft Grey
-                            dark: '#34495E',   // Charcoal Grey
-                        },
+                        primary: '#2C3E50', secondary: '#00B894', accent: '#FFA500',
+                        neutral: { light: '#F5F7FA', dark: '#34495E' },
                     },
-                    fontFamily: {
-                        heading: ['Montserrat', 'sans-serif'],
-                        body: ['Open Sans', 'sans-serif'],
-                    },
+                    fontFamily: { heading: ['Montserrat', 'sans-serif'], body: ['Open Sans', 'sans-serif'], },
                 },
             },
         };
     </script>
     
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="font-body bg-neutral-light text-neutral-dark">
 
     <header id="navbar" class="bg-primary/80 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-2xl font-heading font-bold text-white">EduSpark Tutors</a>
+            <a href="index.html" class="text-2xl font-heading font-bold text-white">EduSpark Tutors</a>
             <nav class="hidden md:flex space-x-8 items-center">
-                <a href="#home" class="nav-link text-white hover:text-secondary transition">Home</a>
-                <a href="#how-it-works" class="nav-link text-white hover:text-secondary transition">How It Works</a>
-                <a href="#tutors" class="nav-link text-white hover:text-secondary transition">Our Spark</a>
-                <a href="#subjects" class="nav-link text-white hover:text-secondary transition">Subjects</a>
+                <a href="index.html" class="nav-link text-secondary font-bold">Home</a>
+                <a href="about.html" class="nav-link text-white hover:text-secondary transition">About Us</a>
+                <a href="tutors.html" class="nav-link text-white hover:text-secondary transition">Our Tutors</a>
                 <a href="#success-stories" class="nav-link text-white hover:text-secondary transition">Success</a>
                 <a href="#faq" class="nav-link text-white hover:text-secondary transition">FAQ</a>
             </nav>
@@ -56,167 +48,105 @@
 
     <main>
         <section id="home" class="relative min-h-screen flex items-center bg-primary text-white pt-20">
-            <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://placehold.co/1920x1080/2C3E50/FFFFFF?text=Happy+Students');"></div>
+            <div class="absolute inset-0 bg-cover bg-center opacity-10" style="background-image: url('https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&w=1920');"></div>
             <div class="absolute inset-0 bg-gradient-to-b from-primary via-primary/80 to-primary"></div>
             <div class="container mx-auto px-6 text-center z-10">
-                <h1 class="text-4xl md:text-6xl font-extrabold font-heading mb-4 leading-tight">Ignite Your Child's Potential in <span class="text-secondary">Jabalpur</span>.</h1>
-                <p class="text-lg md:text-xl text-neutral-light mb-8 max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-6xl font-extrabold font-heading mb-4 leading-tight animate-fade-in-down">Ignite Your Child's Potential in <span class="text-secondary">Jabalpur</span>.</h1>
+                <p class="text-lg md:text-xl text-neutral-light mb-8 max-w-3xl mx-auto animate-fade-in-up">
                     Personalized home tutoring for academic excellence in Math, Science, English, and beyond. Tailored for success.
                 </p>
-                <div class="flex justify-center items-center space-x-4">
+                <div class="flex justify-center items-center space-x-4 animate-fade-in-up">
                     <button class="open-modal-btn bg-accent hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform duration-300 hover:scale-105 shadow-lg">
                         Start Free Trial Today
                     </button>
-                    <a href="#subjects" class="text-neutral-light hover:text-secondary transition group">
-                        Explore Our Programs <span class="inline-block transition-transform group-hover:translate-x-1">&#8594;</span>
+                    <a href="about.html" class="text-neutral-light hover:text-secondary transition group">
+                        Why Choose Us? <span class="inline-block transition-transform group-hover:translate-x-1">&#8594;</span>
                     </a>
                 </div>
-            </div>
-            <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-                <svg class="w-6 h-6 text-white" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-                </svg>
             </div>
         </section>
 
         <section id="how-it-works" class="py-20 bg-white">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold font-heading text-primary mb-2">Our Spark Process</h2>
-                <p class="text-neutral-dark mb-12">A simple, effective path to academic brilliance.</p>
+                <h2 class="text-3xl md:text-4xl font-bold font-heading text-primary mb-12">Our Simple Path to Success</h2>
                 <div class="grid md:grid-cols-3 gap-12">
-                    <div class="text-center">
+                    <div class="reveal">
                         <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_z4s3ba9s.json" background="transparent" speed="1" style="width: 150px; height: 150px; margin: auto;" loop autoplay></lottie-player>
                         <h3 class="text-2xl font-bold font-heading text-primary mt-4 mb-2">1. Discover & Design</h3>
-                        <p>Free assessment to understand your child's needs, followed by a personalized learning plan.</p>
+                        <p>We start with a free assessment to pinpoint your child's strengths and challenges, then craft a unique learning plan.</p>
                     </div>
-                    <div class="text-center">
+                    <div class="reveal">
                         <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_x9iGIp.json" background="transparent" speed="1" style="width: 150px; height: 150px; margin: auto;" loop autoplay></lottie-player>
                         <h3 class="text-2xl font-bold font-heading text-primary mt-4 mb-2">2. Learn & Grow</h3>
-                        <p>Engaging 1-on-1 sessions with expert tutors using interactive and proven teaching methods.</p>
+                        <p>Engaging 1-on-1 sessions with expert tutors who make learning interactive, fun, and effective.</p>
                     </div>
-                    <div class="text-center">
+                    <div class="reveal">
                         <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_m6a2y0f8.json" background="transparent" speed="1" style="width: 150px; height: 150px; margin: auto;" loop autoplay></lottie-player>
                         <h3 class="text-2xl font-bold font-heading text-primary mt-4 mb-2">3. Track & Triumph</h3>
-                        <p>Regular progress reports and feedback to celebrate milestones and ensure goal achievement.</p>
+                        <p>With regular progress reports and feedback, we celebrate every milestone on the path to success.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="tutors" class="py-20 bg-neutral-light">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold font-heading text-primary mb-2">Meet Our Spark Gurus</h2>
-                <p class="text-neutral-dark mb-12">Certified, passionate, and experienced tutors from Jabalpur.</p>
-                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <div class="bg-white rounded-lg shadow-md p-6 text-center group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                        <img loading="lazy" src="https://placehold.co/150x150/00B894/FFFFFF?text=DS" alt="Tutor Deepika Singh" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-secondary">
-                        <h3 class="text-xl font-bold font-heading text-primary">Ms. Deepika Singh</h3>
-                        <p class="text-neutral-dark mb-2">Expert in JEE/NEET Physics</p>
-                        <span class="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1 rounded-full">Certified Expert</span>
-                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="open-tutor-modal-btn text-accent font-bold">View Profile</button>
+        <section id="success-stories" class="py-20 bg-neutral-light">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading text-primary text-center mb-12">Success Stories from Jabalpur</h2>
+                <div class="relative">
+                    <div id="slider-container" class="overflow-hidden">
+                        <div id="slider" class="flex transition-transform duration-500 ease-in-out">
+                            <div class="w-full flex-shrink-0 px-4">
+                                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                                    <img src="https://placehold.co/100x100/00B894/FFFFFF?text=RM" alt="Rohan M." class="w-24 h-24 rounded-full mx-auto -mt-20 border-4 border-white">
+                                    <p class="text-neutral-dark my-4 italic">"EduSpark's personalized approach helped me turn my fear of Physics into my strongest subject. My scores jumped from 65% to 92%!"</p>
+                                    <h4 class="font-bold text-primary">Rohan M., Class 10</h4>
+                                    <p class="text-sm text-gray-500">St. Aloysius School, Jabalpur</p>
+                                </div>
+                            </div>
+                            <div class="w-full flex-shrink-0 px-4">
+                               <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                                    <img src="https://placehold.co/100x100/FFA500/FFFFFF?text=PS" alt="Priya S." class="w-24 h-24 rounded-full mx-auto -mt-20 border-4 border-white">
+                                    <p class="text-neutral-dark my-4 italic">"The tutors are so patient. I can ask any doubt without hesitation. My confidence in Maths has soared."</p>
+                                    <h4 class="font-bold text-primary">Priya S., Class 8</h4>
+                                    <p class="text-sm text-gray-500">Christ Church Diocesan School, Jabalpur</p>
+                                </div>
+                            </div>
+                            </div>
+                    </div>
+                    <button id="prev" class="absolute top-1/2 left-0 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">&lt;</button>
+                    <button id="next" class="absolute top-1/2 right-0 -translate-y-1/2 bg-white p-2 rounded-full shadow-md">&gt;</button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="faq" class="py-20 bg-white">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="text-3xl md:text-4xl font-bold font-heading text-primary text-center mb-12">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div class="faq-item bg-neutral-light rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-primary">
+                            <span>What safety measures do you take for home tutoring in Jabalpur?</span>
+                            <span class="faq-icon text-2xl transform transition-transform">-</span>
+                        </button>
+                        <div class="faq-answer overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                            <p class="p-5 pt-0 text-neutral-dark">Safety is our top priority. All our tutors in Jabalpur undergo a rigorous background check, including police verification. We also have a strict code of conduct and provide parents with a direct contact for any concerns.</p>
                         </div>
                     </div>
-                    <div class="bg-white rounded-lg shadow-md p-6 text-center group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                        <img loading="lazy" src="https://placehold.co/150x150/FFA500/FFFFFF?text=AS" alt="Tutor Ankit Sharma" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-accent">
-                        <h3 class="text-xl font-bold font-heading text-primary">Mr. Ankit Sharma</h3>
-                        <p class="text-neutral-dark mb-2">MP Board Maths Specialist</p>
-                        <span class="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1 rounded-full">Certified Expert</span>
-                        <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="open-tutor-modal-btn text-accent font-bold">View Profile</button>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-6 text-center group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                        <img loading="lazy" src="https://placehold.co/150x150/2C3E50/FFFFFF?text=RP" alt="Tutor Riya Patel" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary">
-                        <h3 class="text-xl font-bold font-heading text-primary">Ms. Riya Patel</h3>
-                        <p class="text-neutral-dark mb-2">English & NTSE Prep</p>
-                        <span class="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1 rounded-full">Certified Expert</span>
-                         <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="open-tutor-modal-btn text-accent font-bold">View Profile</button>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-lg shadow-md p-6 text-center group transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                        <img loading="lazy" src="https://placehold.co/150x150/34495E/FFFFFF?text=VK" alt="Tutor Vikram Kumar" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-neutral-dark">
-                        <h3 class="text-xl font-bold font-heading text-primary">Mr. Vikram Kumar</h3>
-                        <p class="text-neutral-dark mb-2">Vedic Maths & Science</p>
-                        <span class="bg-secondary/20 text-secondary text-xs font-bold px-3 py-1 rounded-full">Certified Expert</span>
-                         <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                            <button class="open-tutor-modal-btn text-accent font-bold">View Profile</button>
+                     <div class="faq-item bg-neutral-light rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-5 font-semibold text-primary">
+                            <span>How do you ensure the quality of tutors?</span>
+                            <span class="faq-icon text-2xl transform transition-transform">+</span>
+                        </button>
+                        <div class="faq-answer overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                             <p class="p-5 pt-0 text-neutral-dark">Our tutors go through a 4-step selection process: a subject matter expert test, a teaching skills interview, a background check, and finally, comprehensive training on our teaching methodology.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        </main>
+    </main>
     
-    <div id="trial-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0 transition-opacity duration-300">
-        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-lg relative transform scale-95 transition-transform duration-300">
-            <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-800">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <h3 class="text-2xl font-bold font-heading text-primary mb-2">Ignite Your Journey: Schedule a Free Trial</h3>
-            <p class="text-neutral-dark mb-6">Let's find the perfect Spark Guru for your child.</p>
-            <form>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <input type="text" placeholder="Parent's Full Name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
-                    <input type="text" placeholder="Student's Full Name" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
-                </div>
-                <div class="mt-4">
-                    <input type="email" placeholder="Email Address" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
-                </div>
-                <div class="mt-4">
-                    <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                     <input type="text" placeholder="Grade Level (e.g., Class 10)" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
-                    <select class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-secondary focus:outline-none">
-                        <option>Preferred Subject</option>
-                        <option>Maths</option>
-                        <option>Science</option>
-                        <option>English</option>
-                        <option>Competitive Exams</option>
-                    </select>
-                </div>
-                <div class="mt-6">
-                    <button type="submit" class="w-full bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition-transform duration-300 hover:scale-105">Request Free Trial</button>
-                </div>
-                <p class="text-xs text-gray-500 mt-4 text-center">Your information is safe with us.</p>
-            </form>
-        </div>
-    </div>
-
-    <div id="tutor-modal" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4 z-50 hidden opacity-0 transition-opacity duration-300">
-        <div class="bg-white rounded-lg shadow-xl p-8 w-full max-w-2xl relative transform scale-95 transition-transform duration-300">
-             <button class="close-modal-btn absolute top-4 right-4 text-gray-500 hover:text-gray-800">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-            </button>
-            <div class="flex flex-col md:flex-row gap-6">
-                <div class="flex-shrink-0">
-                    <img loading="lazy" src="https://placehold.co/150x150/00B894/FFFFFF?text=DS" alt="Tutor Deepika Singh" class="w-32 h-32 rounded-full mx-auto md:mx-0 border-4 border-secondary">
-                </div>
-                <div>
-                     <h3 class="text-3xl font-bold font-heading text-primary">Ms. Deepika Singh</h3>
-                     <p class="text-accent font-semibold text-lg">Expert in JEE/NEET Physics</p>
-                     <p class="mt-4 text-neutral-dark">A passionate educator with 8+ years of experience, holding an M.Sc. in Physics from Rani Durgavati Vishwavidyalaya, Jabalpur. My teaching philosophy is to make complex concepts simple and intuitive.</p>
-                </div>
-            </div>
-             <div class="mt-6">
-                 <h4 class="text-xl font-bold font-heading text-primary mb-2">Expertise</h4>
-                 <div class="flex flex-wrap gap-2">
-                     <span class="bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">Mechanics</span>
-                     <span class="bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">Electromagnetism</span>
-                     <span class="bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">Thermodynamics</span>
-                     <span class="bg-secondary/20 text-secondary text-sm font-semibold px-3 py-1 rounded-full">Optics</span>
-                 </div>
-             </div>
-             <div class="mt-6">
-                  <button class="w-full bg-accent hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg text-lg transition-transform duration-300 hover:scale-105">Request This Tutor for a Trial</button>
-             </div>
-        </div>
-    </div>
-
-
     <script src="script.js"></script>
 </body>
 </html>
