@@ -1,83 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Meta -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Govt of Bharat - Exams & Jobs</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <meta name="description" content="MindBloom Tutors - Professional home tutoring services for Math, Science, English and more. Personalized 1-on-1 sessions with expert tutors.">
+  <title>MindBloom Tutors</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lato:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-  <!-- Navbar -->
-  <nav class="bg-white shadow-md">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold text-blue-600">Govt of Bharat</h1>
-      <ul class="flex gap-6">
-        <li><a href="index.html" class="hover:text-blue-600">Home</a></li>
-        <li><a href="exams.html" class="hover:text-blue-600">Exams</a></li>
-        <li><a href="jobs.html" class="hover:text-blue-600">Jobs</a></li>
-        <li><a href="resources.html" class="hover:text-blue-600">Resources</a></li>
-        <li><a href="contact.html" class="hover:text-blue-600">Contact</a></li>
+<!-- ✅ Navbar -->
+<nav id="navbar" class="navbar navbar-expand-lg fixed-top py-3">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-primary" href="#">MindBloom Tutors</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto me-3">
+        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#how-it-works">How It Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tutors">Tutors</a></li>
+        <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
       </ul>
+      <a href="#" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Book Free Demo</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Hero Section -->
-  <section class="text-center py-20 bg-gradient-to-r from-blue-500 to-indigo-600 text-white">
-    <h2 class="text-4xl font-bold mb-4">Welcome to Govt of Bharat</h2>
-    <p class="text-lg mb-6">Stay updated with Exams, Jobs, and Resources</p>
-    <a href="jobs.html" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200">Check Jobs</a>
-  </section>
+<!-- ✅ Hero -->
+<header id="hero" class="vh-100 d-flex align-items-center text-center text-white"
+ style="background: url('https://placehold.co/1920x1080?text=Tutor+with+student+image') center/cover no-repeat;">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Unlock Your Child's Full Potential</h1>
+    <p class="lead my-3">Personalized, one-on-one tutoring from certified experts in Math, Science, English, and more.</p>
+    <a href="#" class="btn btn-accent btn-lg me-3" data-bs-toggle="modal" data-bs-target="#consultationModal">Book a Free Consultation</a>
+    <a href="#tutors" class="d-block mt-3 text-white text-decoration-underline">See Our Tutors →</a>
+  </div>
+</header>
 
-  <!-- Features -->
-  <section class="max-w-6xl mx-auto py-16 px-6 grid md:grid-cols-3 gap-8">
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-bold mb-2 text-blue-600">Exams Analysis</h3>
-      <p>Get latest exam trends, question weightage and smart strategy.</p>
+<!-- ✅ How It Works -->
+<section id="how-it-works" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">How It Works</h2>
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm p-4">
+          <i class="bi bi-person-check display-4 text-primary mb-3"></i>
+          <h5>Consult & Match</h5>
+          <p>Free consultation to match your child with the perfect tutor.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm p-4">
+          <i class="bi bi-lightbulb display-4 text-secondary mb-3"></i>
+          <h5>Personalized Learning</h5>
+          <p>Customized lesson plans and one-on-one attention for your child.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm p-4">
+          <i class="bi bi-bar-chart-line display-4 text-warning mb-3"></i>
+          <h5>Track Progress</h5>
+          <p>Regular assessments and detailed progress reports for parents.</p>
+        </div>
+      </div>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-bold mb-2 text-blue-600">Jobs Updates</h3>
-      <p>Fill the form and get access to govt job opportunities.</p>
+  </div>
+</section>
+
+<!-- ✅ Tutors -->
+<section id="tutors" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5">Our Expert Tutors</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="card h-100 shadow">
+          <img src="https://placehold.co/300x300?text=Tutor+Profile+1" class="card-img-top" alt="Tutor image placeholder">
+          <div class="card-body">
+            <h5>Dr. Anjali Sharma</h5>
+            <p>Ph.D. Physics | 10+ Years Experience</p>
+            <p>Subjects: Physics, Advanced Math</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal">View Profile</button>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat tutor cards (3-4 cards total) -->
+      <div class="col-md-3">
+        <div class="card h-100 shadow">
+          <img src="https://placehold.co/300x300?text=Tutor+Profile+2" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5>Mr. Rohit Mehra</h5>
+            <p>M.Sc. Chemistry | 8 Years Experience</p>
+            <p>Subjects: Chemistry, Biology</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal">View Profile</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 shadow">
+          <img src="https://placehold.co/300x300?text=Tutor+Profile+3" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5>Mrs. Neha Kapoor</h5>
+            <p>B.A. English | 6 Years Experience</p>
+            <p>Subjects: English, Literature</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal">View Profile</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card h-100 shadow">
+          <img src="https://placehold.co/300x300?text=Tutor+Profile+4" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5>Mr. Arjun Singh</h5>
+            <p>B.Tech. CS | 5 Years Experience</p>
+            <p>Subjects: Computer Science, Math</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#tutorModal">View Profile</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <h3 class="text-xl font-bold mb-2 text-blue-600">Free Resources</h3>
-      <p>Download PDFs, notes and preparation material for free.</p>
+  </div>
+</section>
+
+<!-- ✅ Subjects -->
+<section id="subjects" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-5">Subjects We Cover</h2>
+    <div class="row g-4">
+      <div class="col-md-2 col-6"><i class="bi bi-calculator fs-1 text-primary"></i><p>Mathematics</p></div>
+      <div class="col-md-2 col-6"><i class="bi bi-atom fs-1 text-primary"></i><p>Physics</p></div>
+      <div class="col-md-2 col-6"><i class="bi bi-bezier fs-1 text-primary"></i><p>Chemistry</p></div>
+      <div class="col-md-2 col-6"><i class="bi bi-heart-pulse fs-1 text-primary"></i><p>Biology</p></div>
+      <div class="col-md-2 col-6"><i class="bi bi-book fs-1 text-primary"></i><p>English</p></div>
+      <div class="col-md-2 col-6"><i class="bi bi-code-slash fs-1 text-primary"></i><p>Computer Science</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Chart Example -->
-  <section class="max-w-4xl mx-auto px-6 pb-16">
-    <h3 class="text-2xl font-bold text-center mb-6">SSC Exam Analysis</h3>
-    <canvas id="examChart"></canvas>
-  </section>
+<!-- ✅ Testimonials -->
+<section id="testimonials" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5">What Parents Say</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <blockquote class="blockquote">
+            <p class="fs-5 fst-italic">"MindBloom Tutors has transformed my son's approach to studies!"</p>
+            <div class="text-warning mb-2">★★★★★</div>
+            <footer>- Priya K., Parent of 10th Grader</footer>
+          </blockquote>
+        </div>
+        <div class="carousel-item">
+          <blockquote class="blockquote">
+            <p class="fs-5 fst-italic">"Amazing tutors who genuinely care about students' success."</p>
+            <div class="text-warning">★★★★★</div>
+            <footer>- Rajesh M., Father of Class 9 Student</footer>
+          </blockquote>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-300 text-center py-6">
-    <p>© 2025 Govt of Bharat | Made with ❤️ on GitHub Pages</p>
-  </footer>
+<!-- ✅ Pricing -->
+<section id="pricing" class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-5">Our Plans</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5>Basic</h5>
+            <p class="fs-3 text-primary mb-3">₹4,999 / month</p>
+            <ul class="list-unstyled">
+              <li>8 Sessions</li>
+              <li>Progress Reports</li>
+              <li>Email Support</li>
+            </ul>
+            <a href="#" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow border-primary">
+          <div class="card-body">
+            <h5>Standard</h5>
+            <p class="fs-3 text-primary">₹6,999 / month</p>
+            <ul class="list-unstyled">
+              <li>12 Sessions</li>
+              <li>Progress Reports</li>
+              <li>24/7 Chat Support</li>
+            </ul>
+            <a href="#" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card shadow">
+          <div class="card-body">
+            <h5>Premium</h5>
+            <p class="fs-3 text-primary">₹8,999 / month</p>
+            <ul class="list-unstyled">
+              <li>16 Sessions</li>
+              <li>Detailed Reports</li>
+              <li>Priority Tutor Selection</li>
+            </ul>
+            <a href="#" class="btn btn-accent" data-bs-toggle="modal" data-bs-target="#consultationModal">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <!-- Chart Script -->
-  <script>
-    const ctx = document.getElementById('examChart');
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['GK', 'Reasoning', 'Maths', 'English'],
-        datasets: [{
-          label: 'Questions',
-          data: [25, 25, 25, 25],
-          borderWidth: 1,
-          backgroundColor: ['#3B82F6','#10B981','#F59E0B','#EF4444']
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false }
-        }
-      }
-    });
-  </script>
+<!-- ✅ FAQ -->
+<section id="faq" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">FAQ</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#q1">What are the qualifications of your tutors?</button>
+        </h2>
+        <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">All tutors hold advanced degrees and years of practical teaching experience.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q2">Is there a long-term contract?</button>
+        </h2>
+        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">No, all our plans are monthly. You can upgrade or cancel anytime.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q3">How do you track student progress?</button>
+        </h2>
+        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">We conduct regular assessments and provide progress reports to parents.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#q4">What if we are not satisfied?</button>
+        </h2>
+        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">We guarantee satisfaction, and if not, we provide immediate tutor replacement.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✅ Footer -->
+<footer class="py-4 bg-dark text-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <h5>MindBloom Tutors</h5>
+        <p>Empowering students with knowledge and personalized home tutoring.</p>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#hero" class="text-white">Home</a></li>
+          <li><a href="#how-it-works" class="text-white">How It Works</a></li>
+          <li><a href="#tutors" class="text-white">Tutors</a></li>
+          <li><a href="#subjects" class="text-white">Subjects</a></li>
+          <li><a href="#faq" class="text-white">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4 mb-3">
+        <h5>Contact Us</h5>
+        <p><i class="bi bi-telephone"></i> +91-9876543210</p>
+        <p><i class="bi bi-envelope"></i> info@mindbloomtutors.com</p>
+        <p><i class="bi bi-geo-alt"></i> New Delhi, India</p>
+        <div>
+          <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-3">&copy; 2025 MindBloom Tutors. All Rights Reserved.</div>
+  </div>
+</footer>
+
+<!-- ✅ Modals -->
+<!-- Consultation Modal -->
+<div class="modal fade" id="consultationModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+      <h5 class="modal-title">Schedule Your Free Consultation</h5>
+      <form>
+        <div class="mb-3"><input type="text" class="form-control" placeholder="Parent's Name"></div>
+        <div class="mb-3"><input type="text" class="form-control" placeholder="Student's Name"></div>
+        <div class="mb-3"><input type="email" class="form-control" placeholder="Email"></div>
+        <div class="mb-3"><input type="tel" class="form-control" placeholder="Phone Number"></div>
+        <div class="mb-3"><input type="text" class="form-control" placeholder="Grade Level"></div>
+        <div class="mb-3"><input type="text" class="form-control" placeholder="Subject(s) of Interest"></div>
+        <button type="submit" class="btn btn-accent w-100">Request My Demo</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Tutor Profile Modal -->
+<div class="modal fade" id="tutorModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content p-4 text-center">
+      <img src="https://placehold.co/300x300?text=Tutor+Large+Photo" alt="" class="rounded-circle mb-3">
+      <h5>Dr. Anjali Sharma</h5>
+      <p>Ph.D. in Physics, 10+ Years of Experience</p>
+      <p>Detailed bio and teaching philosophy here... She believes in conceptual understanding and student confidence building.</p>
+      <p>Expertise: Physics, Advanced Math</p>
+      <a href="#" class="btn btn-accent">Request This Tutor</a>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
